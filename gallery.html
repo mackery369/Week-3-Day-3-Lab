@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first webpage</title>
+    <!-- Embed Style Method -->
+    
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <!-- Container to wrap everything -->
+    <div id="container">
+    <!-- Brand of website -->
+    <header style="font-size: 60px; color: #fff;">My Web Site Brand</header> <!-- Inline CSS method -->
+    <!-- Main navigation -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul> <!-- End main navigation -->
+    </nav>
+    <!-- Main content -->
+    <main>
+        <h1>My fourth heading</h1>
+        <p>My fourth paragraph</p>
+       
+            <ul id="album">
+                 <div class="photos">
+                    <li id="photo"><img src="images/cabininsnow.jpeg" alt="Cabin in Snowy Field"></li>
+                    <li id="photo"><img src="images/snowybunny.jpeg" alt="Bunny in Snow"></li>
+                    <li id="photo"><img src="images/meltingsnowtrees.jpeg" alt="Evergreens with Light Snow"></li>
+                    <li id="photo"><img src="images/snowcreek.jpeg" alt="Snow Creek"></li>
+                    <li id="photo"><img src="images/snowmountain.jpeg" alt="Snowy Mountain"></li>
+                    <li id="photo"><img src="images/snowtreeline.jpeg" alt="Snowy Treeline"></li>
+                    <li id="photo"><img src="images/snowyforestroad.jpeg" alt="Snowy Forest Road"></li>
+                    <li id="photo"><img src="images/springwinterforest.jpeg" alt="Thawing Winter Forest"></li>
+                    <li id="photo"><img src="images/summersnowday.jpeg" alt="Warm Snowy Day"></li>
+                    <li id="photo"><img src="images/snowytreebranches.jpeg" alt="Snowy Tree Branches"></li>
+                </div>
+                <!--<li id="photo"><img src="images/winterland1.jpg"></li>
+                <li id="photo"><img src="images/winterland2.jpg"></li>
+                <li id="photo"><img src="images/winterland3.jpg"></li>
+                <li id="photo"><img src="images/winterland4.jpg"></li>
+                <li id="photo"><img src="images/winterland5.jpg"></li>
+                <li id="photo"><img src="images/winterland6.jpg"></li>-->
+            </ul>
+    </main> <!-- End main content -->
+
+    <!-- Footer information -->
+    <footer>&copy; Copywrite 2020</footer>
+
+    </div> <!-- End container-->
+
+    <script>
+        var photos = [];
+        var fileNames = [];
+        var imageList = [];
+        var image;
+        var openList = "<li id='photo'>";
+        var closeList = "</li>";
+
+        //loop to create 6 images starting with index of 0
+        for (var i=0; i<6; i++){
+            fileNames.push("winterland"+(i+1));
+            photos.push("<img src='images/"+fileNames[i]+".jpg'>");
+            image = openList + photos[i] + closeList;
+            imageList.push(image);
+        }
+
+        //Diplaying all six image codes stored in the array
+        document.getElementbyId("album").innerHTML = imageList.join(" ");
+    </script>
+</body>
+</html>
