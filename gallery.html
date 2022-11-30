@@ -28,16 +28,37 @@
        
             <ul id="album">
                  <div class="photos">
-                    <li id="photo"><img src="images/cabininsnow.jpeg" alt="Cabin in Snowy Field"></li>
-                    <li id="photo"><img src="images/snowybunny.jpeg" alt="Bunny in Snow"></li>
-                    <li id="photo"><img src="images/meltingsnowtrees.jpeg" alt="Evergreens with Light Snow"></li>
-                    <li id="photo"><img src="images/snowcreek.jpeg" alt="Snow Creek"></li>
-                    <li id="photo"><img src="images/snowmountain.jpeg" alt="Snowy Mountain"></li>
-                    <li id="photo"><img src="images/snowtreeline.jpeg" alt="Snowy Treeline"></li>
-                    <li id="photo"><img src="images/snowyforestroad.jpeg" alt="Snowy Forest Road"></li>
-                    <li id="photo"><img src="images/springwinterforest.jpeg" alt="Thawing Winter Forest"></li>
-                    <li id="photo"><img src="images/summersnowday.jpeg" alt="Warm Snowy Day"></li>
-                    <li id="photo"><img src="images/snowytreebranches.jpeg" alt="Snowy Tree Branches"></li>
+                    <!-- <figure id="photo">
+                        <img src="images/thewinterland1.jpeg" alt="The Winterland 1">
+                        <figcaption>The Winterland 1</figcaption>
+                    </figure>
+                    <figure id="photo"><img src="images/thewinterland2.jpeg" alt="The Winterland 2">
+                    
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland3.jpeg" alt="The Winterland 3">
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland4.jpeg" alt="The Winterland 4">
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland5.jpeg" alt="The Winterland 5">
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland6.jpeg" alt="The Winterland 6">
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland7.jpeg" alt="The Winterland 7">
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland8.jpeg" alt="The Winterland 8">
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland9.jpeg" alt="The Winterland 9">
+                    </figure>
+                    <figure id="photo">
+                        <img src="images/thewinterland10.jpeg" alt="The Winterland 10">
+                    </figure> -->
                 </div>
                 <!--<li id="photo"><img src="images/winterland1.jpg"></li>
                 <li id="photo"><img src="images/winterland2.jpg"></li>
@@ -46,6 +67,7 @@
                 <li id="photo"><img src="images/winterland5.jpg"></li>
                 <li id="photo"><img src="images/winterland6.jpg"></li>-->
             </ul>
+
     </main> <!-- End main content -->
 
     <!-- Footer information -->
@@ -58,19 +80,26 @@
         var fileNames = [];
         var imageList = [];
         var image;
-        var openList = "<li id='photo'>";
-        var closeList = "</li>";
+        var openList = "<figure id='photo'>";
+        var closeList = "</figure>";
+        var alt = [];
 
         //loop to create 6 images starting with index of 0
-        for (var i=0; i<6; i++){
-            fileNames.push("winterland"+(i+1));
-            photos.push("<img src='images/"+fileNames[i]+".jpg'>");
+        for (var i=0; i<=9; i++){
+            fileNames.push("thewinterland"+(i+1));
+            photos.push("<img src='images/"+fileNames[i]+".jpeg'>");
             image = openList + photos[i] + closeList;
             imageList.push(image);
         }
 
-        //Diplaying all six image codes stored in the array
-        document.getElementbyId("album").innerHTML = imageList.join(" ");
+        //Diplaying all 10 image codes stored in the array
+        document.getElementById("album").innerHTML = imageList.join(" ");
+
+        for (var i=0; i<=9; i++){
+            document.getElementById("album: alt").innerHTML = 
+        }
+
+
     </script>
 </body>
 </html>
