@@ -80,6 +80,18 @@ main #album #photo img {
     width: 400px;
 }
 
+/* Image Descriptions with Hover */
+/* div {
+    background-color: gray;
+    opacity: 30%;
+    padding: 5px;
+    display: block;
+  } */
+    
+  #photo:hover + div {
+    display: block;
+  }
+
 footer {
     height: 40px;
     background-color: rgb(129, 141, 179);
@@ -87,3 +99,4 @@ footer {
     padding-top: 20px;
     color: rgb(211, 218, 240);
 }
+
