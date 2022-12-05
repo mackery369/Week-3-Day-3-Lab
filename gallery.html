@@ -27,38 +27,18 @@
         <p>My fourth paragraph</p>
        
             <ul id="album">
-                 <div class="photos">
-                    <!-- <figure id="photo">
-                        <img src="images/thewinterland1.jpeg" alt="The Winterland 1">
-                        <figcaption>The Winterland 1</figcaption>
-                    </figure>
-                    <figure id="photo"><img src="images/thewinterland2.jpeg" alt="The Winterland 2">
-                    
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland3.jpeg" alt="The Winterland 3">
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland4.jpeg" alt="The Winterland 4">
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland5.jpeg" alt="The Winterland 5">
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland6.jpeg" alt="The Winterland 6">
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland7.jpeg" alt="The Winterland 7">
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland8.jpeg" alt="The Winterland 8">
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland9.jpeg" alt="The Winterland 9">
-                    </figure>
-                    <figure id="photo">
-                        <img src="images/thewinterland10.jpeg" alt="The Winterland 10">
-                    </figure> -->
+                <div class="photos">
+                    <caption class="caption"> </caption>
+                    <li id="photo"><img src="images/thewinterland1.jpeg" alt="The Winterland 1"></li>
+                    <li id="photo"><img src="images/thewinterland2.jpeg" alt="The Winterland 2"></li>
+                    <li id="photo"><img src="images/thewinterland3.jpeg" alt="The Winterland 3"></li>
+                    <li id="photo"><img src="images/thewinterland4.jpeg" alt="The Winterland 4"></li>
+                    <li id="photo"><img src="images/thewinterland5.jpeg" alt="The Winterland 5"></li>
+                    <li id="photo"><img src="images/thewinterland6.jpeg" alt="The Winterland 6"></li>
+                    <li id="photo"><img src="images/thewinterland7.jpeg" alt="The Winterland 7"></li>
+                    <li id="photo"><img src="images/thewinterland8.jpeg" alt="The Winterland 8"></li>
+                    <li id="photo"><img src="images/thewinterland9.jpeg" alt="The Winterland 9"></li>
+                    <li id="photo"><img src="images/thewinterland10.jpeg" alt="The Winterland 10"></li>
                 </div>
                 <!--<li id="photo"><img src="images/winterland1.jpg"></li>
                 <li id="photo"><img src="images/winterland2.jpg"></li>
@@ -80,25 +60,36 @@
         var fileNames = [];
         var imageList = [];
         var image;
-        var openList = "<figure id='photo'>";
-        var closeList = "</figure>";
-        var alt = [];
+        var openList = "<li id='photo'>";
+        var closeList = "</li>";
+        var openCaption ="<p class='caption'>";
+        var closeCaption = "</p";
+        var captionText = ["The Winterland 1","The Winterland 2","The Winterland 3","The Winterland 4","The Winterland 5","The Winterland 6","The Winterland 7","The Winterland 8","The Winterland 9","The Winterland 10"];
+        var openDesc = "<div class='description'>";
+        var closeDesc = "</div>";
+        var descText = [
+            "Bright light shines from a small cabin in the woods at dusk.",
+            "Evergreens with light snow disappear into the mist.",
+            "A crystal clear river runs through a snow covered evergreen forest.",
+            "An evergreen forest gives way to powerful mountain range.",
+            "Thick ice covers a watch tower and its surrounding forest.",
+            "A small rabbit sits peacefully in fresh snow.",
+            "A snowy driving path winds through a forest.",
+            "Fall branches encased in frozen morning dew.",
+            "Spring appears to melt snow on a forest pathway.",
+            "Golden hour in a snowy forest.",
+        ]
 
         //loop to create 6 images starting with index of 0
         for (var i=0; i<=9; i++){
             fileNames.push("thewinterland"+(i+1));
             photos.push("<img src='images/"+fileNames[i]+".jpeg'>");
-            image = openList + photos[i] + closeList;
+            image = openList + photos[i] + closeList + "<br>" + openCaption + captionText[i] + closecaption;
             imageList.push(image);
         }
 
         //Diplaying all 10 image codes stored in the array
         document.getElementById("album").innerHTML = imageList.join(" ");
-
-        for (var i=0; i<=9; i++){
-            document.getElementById("album: alt").innerHTML = 
-        }
-
 
     </script>
 </body>
