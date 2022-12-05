@@ -62,9 +62,11 @@
         var image;
         var openList = "<li id='photo'>";
         var closeList = "</li>";
+        var caption = [];
         var openCaption ="<p class='caption'>";
         var closeCaption = "</p";
         var captionText = ["The Winterland 1","The Winterland 2","The Winterland 3","The Winterland 4","The Winterland 5","The Winterland 6","The Winterland 7","The Winterland 8","The Winterland 9","The Winterland 10"];
+        var description = [];
         var openDesc = "<div class='description'>";
         var closeDesc = "</div>";
         var descText = [
@@ -78,14 +80,24 @@
             "Fall branches encased in frozen morning dew.",
             "Spring appears to melt snow on a forest pathway.",
             "Golden hour in a snowy forest.",
-        ]
+        ];
 
         //loop to create 6 images starting with index of 0
         for (var i=0; i<=9; i++){
             fileNames.push("thewinterland"+(i+1));
             photos.push("<img src='images/"+fileNames[i]+".jpeg'>");
-            image = openList + photos[i] + closeList + "<br>" + openCaption + captionText[i] + closecaption;
+            image = openList + photos[i] + closeList; //+ "<br>" + openCaption + captionText[i] + closecaption;
             imageList.push(image);
+        }
+
+        for (var i=0; i<=9; i++){
+            caption = openCaption + captionText[i] + closeCaption;
+            captionList.push(caption);
+        }
+
+        for (var i=0; i<=9; i++){
+            description = openDesc + descText[i] + closeDesc;
+            deskList.push(description);
         }
 
         //Diplaying all 10 image codes stored in the array
